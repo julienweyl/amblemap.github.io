@@ -1,0 +1,69 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXGroup section */
+		F987B2D3203B120100B1C87D = {
+			isa = PBXGroup;
+			children = (
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXProject section */
+		F987B2D4203B120100B1C87D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+			};
+			buildConfigurationList = F987B2D7203B120100B1C87D /* Build configuration list for PBXProject "amblemaps" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F987B2D3203B120100B1C87D;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		F987B2D8203B120100B1C87D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				Embedded_Binaries = "node_modules/@mapbox/react-native-mapbox-gl/ios/Mapbox.framework";
+			};
+			name = Debug;
+		};
+		F987B2D9203B120100B1C87D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				Embedded_Binaries = "node_modules/@mapbox/react-native-mapbox-gl/ios/Mapbox.framework";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F987B2D7203B120100B1C87D /* Build configuration list for PBXProject "amblemaps" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F987B2D8203B120100B1C87D /* Debug */,
+				F987B2D9203B120100B1C87D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F987B2D4203B120100B1C87D /* Project object */;
+}
