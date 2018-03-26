@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="assets/img/faviconamble.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Amble</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/now-ui-kit.css?v=1.1.0" rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="assets/css/demo.css" rel="stylesheet" />
+    <link href="assets/css/amble.css" rel="stylesheet" />
+    <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}</style>
+
+
+<!--   Core JS Files   -->
+<script src="assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<!-- <script src="../assets/js/new/saveToFirebase.js" type="text/javascript"></script> -->
+<script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src=".assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
+<!--  Plugin for the DatePicker, full documentation here: https://github.com/uxsolutions/bootstrap-datepicker -->
+<script src="assets/js/plugins/bootstrap-datepicker.js" type="text/javascript"></script>
+<!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
+<script src="assets/js/now-ui-kit.js?v=1.1.0" type="text/javascript"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114157067-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114157067-1');
+</script>
+
+</head>
+
+<body class="landing-page sidebar-collapse">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-primary fixed-top navbar-transparent " color-on-scroll="400">
+        <div class="container">
+            <!-- <div class="dropdown button-dropdown">
+                <a href="#pablo" class="dropdown-toggle" id="navbarDropdown" data-toggle="dropdown">
+                    <span class="button-bar"></span>
+                    <span class="button-bar"></span>
+                    <span class="button-bar"></span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-header">Dropdown header</a>
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">One more separated link</a>
+                </div>
+            </div> -->
+            <div class="navbar-translate">
+
+                <a class="navbar-brand" href="index.html" rel="tooltip" data-placement="bottom">
+                    HOME
+                </a>
+                <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="assets/img/blurred-image-1.jpg">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://eepurl.com/dimeA5">Get early access</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/amblemaps" target="_blank">
+                            <i class="fa fa-twitter"></i>
+                            <p class="d-lg-none d-xl-none">Twitter</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/AmbleMaps-543642625996166/?modal=admin_todo_tour" target="_blank">
+                            <i class="fa fa-facebook-square"></i>
+                            <p class="d-lg-none d-xl-none">Facebook</p>
+                        </a>
+                    </li>
+<!--                     <li class="nav-item">
+                        <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/agsdsgfsdGSDg" target="_blank">
+                            <i class="fa fa-instagram"></i>
+                            <p class="d-lg-none d-xl-none">Instagram</p>
+                        </a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+    <!-- Header -->
+    <div class="wrapper">
+        <div class="page-header">
+          <div class="page-header-image" data-parallax="true" style="background-image: url('assets/img-project/background.jpeg')">
+          </div>
+            <div class="container">
+                <div class="content-center">
+                    <img src="assets/img-project/logo-white.png" alt="" height="120px">
+                    <br><br>  <br><br>
+                    <h2>Reinventing <strong>navigation</strong> with <strong>you</strong> in mind</h2>
+                    <h4 class=""><b>amble</b> is a navigational app that provides personalised safety routes for women.
+                    Launching in your city soon!</h4>
+                    </br>
+                        <!-- Begin MailChimp Signup Form -->
+                        <div class="row">
+                            <div class="col-md-4"></div>
+                            <div class="col-md-4">
+                            <!-- <form action="https://lightyourway.us17.list-manage.com/subscribe/post?u=d7171b3d5248731ef6de78974&amp;id=8723f3cb42" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate> -->
+                            <form method="get" action="http://eepurl.com/dimeA5">
+                            <!-- <input type="email" value="" name="EMAIL" class="form-control email" id="mce-EMAIL" placeholder="email address" align="middle" required> -->
+                            <button class="btn btn-primary" type="submit" value="Submit">
+                            Join our waiting list now!
+                            </button>
+                            <!-- <button class="btn btn-primary" type="submit" form="mc-embedded-subscribe-form" value="Submit">
+                            Join our waiting list now!
+                            </button> -->
+                            </form>
+                            </div>
+                            <div class="col-md-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- Section -->
+    <div class="section section-grey">
+        <div class="text-center">
+            <div class="row">
+                <div class="col-md-3 logo">
+                  <a href="https://www.bbc.co.uk/" target="_blank"><img src="assets/img-project/logo_bbc_BW_grey.png" style="height:40px;"></a>
+                </div>
+                <div class="col-md-3 logo">
+                  <a href="http://www.asidatascience.com" target="_blank"><img src="assets/img-project/logo_asi_BW.png" style="height:40px;"></a>
+                </div>
+                <div class="col-md-3 logo">
+                  <a href="http://www.zinc.vc" target="_blank"><img src="assets/img-project/logo_zinc_BW.png" style="height:40px;"></a>
+                </div>
+                <div class="col-md-3 logo">
+                  <a href="https://www.camden.gov.uk" target="_blank"><img src="assets/img-project/logo_camden_BW.png" style="height:40px;"></a>
+                </div>
+              </div>
+        </div>
+    </div>
+    <!-- Section -->
+    <div class="section text-center backgroundcolor" >
+            <div class="container">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="col-md-12 column-backcolor-color">
+                            <h5 class="">
+                               Do you realise you follow your instinct?
+                            </h5>
+                            <p>
+                              71% of times you don’t follow your navigator app in order to avoid parks, and what you perceive to be dangerous places.
+                            </P>
+                          </div>
+                        </div>
+                          <div class="col-md-4">
+                            <div class="col-md-12 column-backcolor-color">
+                                <h5 class="">
+                                      Walking alone at night can feel unsafe
+                                </h5>
+                                <p>
+                                  Women walk disproportionately  fewer steps than men each day for fear of attack and will opt to take taxis instead of walking at night time.
+                                </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="col-md-12 column-backcolor-color">
+                                  <h5 class="">
+                                    Does your app have your back?
+                                  </h5>
+                                  <p>
+                                    We don’t always need to be there quickly but we do want to be there safely. Current navigational apps are made for cars, not for people. We don’t think in ‘meters’ and ‘exits’. We think in you
+                                  </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Section -->
+                      <div class="container">
+                        <br><br>
+                          <div class="section text-center section-color">
+                          <div class="row">
+                            <div class="col-md-12">
+                            <h1>
+                              <strong>Introducing amble, your walking companion.</strong>
+                            </h1>
+                            <h3>
+                              The knowledge of a trusted local, in your pocket.
+                            </h3>
+                            </div>
+                            </div>
+                          </div>
+                </div>
+
+
+<!-- Section -->
+<div class="section text-center section-color">
+<div class="row">
+
+  <div class="col-md-12">
+  <img src="assets/img-project/screen-all.png" style="height:600px;">
+  </div>
+  </div>
+</div>
+
+<!-- Section -->
+<!-- <br>
+<br><br><br>
+            <div class="features-6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8 ml-auto mr-auto text-center">
+                                <h2 class="title"><strong>How do you feel while walking with a friend?</strong></h2>
+                                <h4 class="">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information.</h4>
+                            </div>
+                        </div>
+                        <br>
+                        <br><br><br>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="">
+                                        <h5 class="">For Developers</h5>
+                                        <p>The moment you use Now UI Kit, you know you’ve never felt anything like it. With a single use, this powerfull UI Kit lets you do more than ever before. </p>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <div class="">
+                                        <h4 class="">For Designers</h4>
+                                        <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="phone-container">
+                                    <img src="assets/img-project/amble_navigation_screen.png">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="">
+                                    <div class="">
+                                        <h5 class="">Bootstrap Grid</h5>
+                                        <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                    </div>
+                                </div>
+
+                                <div class="">
+                                    <div class="">
+                                        <h4 class="">Example Pages Included</h4>
+                                        <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div> -->
+
+            <!-- Section -->
+              <div class="container">
+                <div class="row no-gutters">
+                  <div class="col-lg-6 order-lg-1  showcase-text column-padding align-text-top">
+                    <h2>Personalisation</h2>
+                    <p class="lead mb-0">
+                      Everyone is different and we give you the tools to design your route based on your own unique preferences. We have different priorities during the day than we do at night time. We give you the power to choose how you want to walk and travel - your route on your terms.
+                    </p>
+                  </div>
+                  <div class="col-lg-6 order-lg-1  showcase-text column-padding align-text-top">
+                    <h2>Reporting</h2>
+                    <p class="lead mb-0">
+                      Amble allows you to review your route and report issues or incidences you encounter, ensuring that your route and the one of your fellow amblers continuously improves.
+                    </p>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-lg-6 order-lg-1  showcase-text column-padding align-text-top">
+                    <h2>Smart routing</h2>
+                    <p class="lead mb-0">
+                      Unlike other apps, we do not just optimise for time but navigate you down the streets you feel safest enabling you to avoid dangerous areas, parks, unlit and quiet streets and alleyways.
+                    </br></br>You won’t feel alone anymore, because with Amble you will know there are always other Amblers with you.
+                    </p>
+                  </div>
+                  <div class="col-lg-6 order-lg-1  showcase-text column-padding align-text-top">
+                    <h2>Voice enabled</h2>
+                    <p class="lead mb-0">
+                      As humans we like to connect with the world around us. Rather than look down at a map, we want you to look up and enjoy the world around you. Our voice enabled technology will guide you to your destination. We will tell you to turn right at your favourite shop and not at the next 100 metres or to take the next exit.                    </p>
+                  </div>
+                </div>
+                <!-- <div class="row no-gutters">
+                  <div class="col-lg-6 text-white showcase-img" style="background-image: url('assets/img-project/screen-way.png'); height:60px;"></div>
+                  <div class="col-lg-6 my-auto showcase-text">
+                    <h2>Voice enabled</h2>
+                    <p class="lead mb-0">
+                      We know that voice is the future and how we as humans like to connect with the world around us. Instead of looking down at your phone, we allow you to enjoy your surroundings, whilst we navigate you by point of interest.
+                    </p>
+                  </div>
+                </div> -->
+              </div>
+
+  <!-- Section -->
+  <!-- Testimonials -->
+      <section class="testimonials text-center bg-light">
+        <div class="container">
+          <h2 class="mb-5">What people are saying about amble?</h2>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img class="img-fluid rounded-circle mb-3" src="assets/img-project/testimonials-1.jpg" alt="">
+                <h5>Margaret E.</h5>
+                <p class="font-weight-light mb-0">"I don't want to think about my safety, it should just be included in any direction I am given."</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img class="img-fluid rounded-circle mb-3" src="assets/img-project/testimonials-2.jpg" alt="">
+                <h5>Fred S.</h5>
+                <p class="font-weight-light mb-0">"I actually use voice navigation while walking, but it always talks about distance, which is really not intuitive for me."</p>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="testimonial-item mx-auto mb-5 mb-lg-0">
+                <img class="img-fluid rounded-circle mb-3" src="assets/img-project/testimonials-3.jpg" alt="">
+                <h5>Sarah	W.</h5>
+                <p class="font-weight-light mb-0">"People feel safe in a car, as it feels like a bubble. But when you walk, this disapears."</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Section -->
+                <!-- <div class="separator separator-primary" ></div>
+                <div class="section text-center">
+                        <div class="container">
+                                <div class="row">
+                                    <div class="col-md-6 vcenter">
+                                        <img src="assets/img-project/phones.png" width="300" alt="" class="")>
+                                        </img>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h2 class="title">Reinventing navigation... with you in mind!</h2>
+                                        <h7 class="description">
+                                            <p><b>
+                                              In a world where streaming sites know us well enough to recommend TV shows we might like, or music we want to listen to, it seems absurd that maps don’t recognise the different ways we like to navigate the city. Other maps allow you to avoid a traffic jam or a toll way, so why can’t we avoid an unlit street, a park, or a hotspot for inappropriate behaviour? This is all about to change with Amble as we put you at the centre of your journey.
+                                            </b></p>
+                                        </h7>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+    <!-- Section -->
+<!--     <div class="separator separator-primary" ></div> -->
+    <!-- <div class="section text-center">
+            <div class="container">
+                    <div class="row">
+                        <div class="card card-quote" data-background-color="orange">
+                            <h4 class="title-italic">"Maps are only about getting from a to b. The route may be quickest but it also seems dodgiest."</h4>
+                                    <p><b>Ms. Claire Johns</p></b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator separator-primary" ></div> -->
+
+    <!-- Section -->
+                    <!-- Section -->
+                            <div class="section text-center" data-background-color="black">
+                                <div class="container">
+                                  <br>
+                                  <br>
+                                    <form method="get" action="http://eepurl.com/dimeA5">
+                                        <button class="btn btn-primary btn-round btn-lg" type="submit" value="Submit">
+                                        Join our waiting list now!
+                                        </button>
+                                    </form>
+                                </div>
+                                <br>
+                                <br>
+                                <div class="row justify-content-md-center sharing-area text-center">
+                                    <div class="text-center col-md-12 col-lg-8">
+                                        <h3>Thank you for supporting us!</h3>
+                                    </div>
+                                    <div class="text-center col-md-12 col-lg-8">
+                                        <a target="_blank" href="https://twitter.com/amblemaps" class="btn btn-neutral btn-icon btn-twitter btn-round btn-lg" rel="tooltip" title="Follow us">
+                                            <i class="fa fa-twitter"></i>
+                                        </a>
+                                        <a target="_blank" href="https://www.facebook.com/AmbleMaps-543642625996166/?modal=admin_todo_tour" class="btn btn-neutral btn-icon btn-facebook btn-round btn-lg" rel="tooltip" title="Like us">
+                                            <i class="fa fa-facebook-square"></i>
+                                        </a>
+                                        <a target="_blank" href="https://www.linkedin.com/company/amble-maps/" class="btn btn-neutral btn-icon btn-linkedin btn-lg btn-round" rel="tooltip" title="Follow us">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                    <!-- Section -->
+                            <footer class="footer" data-background-color="black">
+                            <div class="container">
+                                    <div class="copyright">
+                                        &copy;
+                                        <script>
+                                            document.write(new Date().getFullYear())
+                                        </script>, Amble maps, all rights reserved. Read our data policy <a href="./data.html">here</a>
+                                    </div>
+                                </div>
+                            </footer>
+                            </div>
+                    </body>
+                    </html>
